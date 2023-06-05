@@ -4,11 +4,11 @@ import { FontFamily } from '../../types/FontFamily';
 import Container from '../shared/Container';
 import Spacer from '../shared/Spacer';
 
-interface AbountPanelProps {
+interface AboutPanelProps {
   tagline: string;
 }
 
-export const AbountPanel: React.FC<AbountPanelProps> = ({ tagline }) => {
+export const AboutPanel: React.FC<AboutPanelProps> = ({ tagline }) => {
   return (
     <section className="text-darkGreen">
       <Container>
