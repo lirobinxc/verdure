@@ -12,7 +12,7 @@ function App() {
         title="Comfort without Compromise"
         subtitle="Find your dream getaway, we'll handle the details."
       />
-      <Spacer size="lg" bgColor="darkGreen" />
+      <Spacer size="xl" bgColor="darkGreen" />
       <FeaturesPanel tagline="Features" />
       <div className="flex h-full items-center justify-center bg-[#063347] text-center text-white">
         WIP

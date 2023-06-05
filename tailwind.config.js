@@ -7,6 +7,13 @@ export default {
         display: ['Koulen', 'cursive'],
         primary: ['Inter', 'sans-serif'],
       },
+      backgroundColor: {
+        darkGreen: '#063347',
+      },
+      textColor: {
+        darkGreen: '#063347',
+        lightGreen: '#34d399',
+      },
       keyframes: {
         hide: {
           from: { opacity: 1 },

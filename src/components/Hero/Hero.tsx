@@ -113,7 +113,7 @@ const Hero: React.FC<HeroProps> = ({ title, subtitle }) => {
           >
             {subtitle}
           </p>
-          <Spacer size="sm" />
+          <Spacer size="md" />
           <CtaButton name="Plan your trip" />
         </motion.div>
       </div>

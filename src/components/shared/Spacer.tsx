@@ -2,7 +2,7 @@ import React from 'react';
 import { twJoin } from 'tailwind-merge';
 
 interface SpacerProps {
-  size: 'sm' | 'md' | 'lg';
+  size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl';
   bgColor?: 'darkGreen';
 }
 
@@ -11,14 +11,23 @@ const Spacer: React.FC<SpacerProps> = ({ size, bgColor }) => {
   let backgroundColor;
 
   switch (size) {
+    case 'xs':
+      heightSpacing = 'h-1';
+      break;
     case 'sm':
-      heightSpacing = 'h-4';
+      heightSpacing = 'h-2';
       break;
     case 'md':
-      heightSpacing = 'h-8';
+      heightSpacing = 'h-4';
       break;
     case 'lg':
+      heightSpacing = 'h-8';
+      break;
+    case 'xl':
       heightSpacing = 'h-12';
+      break;
+    case '2xl':
+      heightSpacing = 'h-24';
       break;
   }
 
@@ -29,7 +38,10 @@ const Spacer: React.FC<SpacerProps> = ({ size, bgColor }) => {
   }
 
   return (
-    <div className={twJoin('w-full', heightSpacing, backgroundColor)}></div>
+    <div
+      className={twJoin('w-full', heightSpacing, backgroundColor)}
+      role="separator"
+    ></div>
   );
 };
 
