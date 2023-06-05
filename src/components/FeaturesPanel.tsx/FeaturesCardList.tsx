@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useState } from 'react';
+import React, { useState } from 'react';
 import FeatureCard, { FeatureCardProps } from '../shared/FeatureCard';
 import useMeasure from 'react-use-measure';
 import { twJoin } from 'tailwind-merge';
@@ -9,7 +9,7 @@ export interface FeatureCardListProps {
 
 const FeatureCardList: React.FC<FeatureCardListProps> = ({ data }) => {
   const [activeIdx, setActiveIdx] = useState(0);
-  const [measuredRef, { height }] = useMeasure({ debounce: 500 });
+  const [measuredRef] = useMeasure({ debounce: 500 });
 
   function handleCardHover(idx: number) {
     setActiveIdx(idx);
@@ -17,16 +17,15 @@ const FeatureCardList: React.FC<FeatureCardListProps> = ({ data }) => {
 
   return (
     <div
-      ref={measuredRef}
       // style={{ height }}
       className={twJoin(
-        height > 0 && `h-[${height}px]`,
-        `flex flex-col
-        md:flex-row md:items-end`
+        `flex flex-col 
+        md:h-[22rem] md:flex-row md:items-end`
       )}
     >
       {data.map((item, i) => (
         <FeatureCard
+          ref={i === 0 ? measuredRef : null}
           key={item.title}
           {...item}
           isActive={i === activeIdx}

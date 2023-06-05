@@ -19,6 +19,10 @@ export default {
           from: { opacity: 1 },
           to: { opacity: 0 },
         },
+        reveal: {
+          from: { opacity: 0 },
+          to: { opacity: 1 },
+        },
         slideIn: {
           from: {
             transform: 'translateX(calc(100% + var(--viewport-padding)))',

@@ -1,10 +1,8 @@
 import React from 'react';
 import Header from '../shared/Header';
-import { ColorName } from '../../types/ColorName';
 import { FontFamily } from '../../types/FontFamily';
 import Container from '../shared/Container';
 import Spacer from '../shared/Spacer';
-import FeatureCard from '../shared/FeatureCard';
 import { mockFeaturePanelData } from './mockFeaturePanelData';
 import FeatureCardList from './FeaturesCardList';
 

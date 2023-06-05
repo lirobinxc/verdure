@@ -1,4 +1,5 @@
 import './App.css';
+import { AbountPanel } from './components/AboutPanel/AboutPanel.tsx';
 import FeaturesPanel from './components/FeaturesPanel.tsx';
 import Hero from './components/Hero';
 import Navbar from './components/Navbar';
@@ -14,9 +15,12 @@ function App() {
       />
       <Spacer size="xl" bgColor="darkGreen" />
       <FeaturesPanel tagline="Features" />
-      <div className="flex h-full items-center justify-center bg-[#063347] text-center text-white">
+      <Spacer size="2xl" bgColor="darkGreen" />
+      <Spacer size="2xl" />
+      <AbountPanel tagline="About us" />
+      {/* <div className="flex h-full items-center justify-center text-center text-white">
         WIP
-      </div>
+      </div> */}
     </>
   );
 }
